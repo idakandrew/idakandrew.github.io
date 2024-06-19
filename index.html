@@ -16,7 +16,7 @@
       <h1 class="large center animate-bottom">Andrew Idak</h1>
       <hr class="border-grey animate-bottom" style="margin:auto;width:40%">
       <p class="norm center animate-bottom">Welcome to my home page!</p>
-      <p class="norm center animate-left delay">See my resume.</p>
+      <p class="norm center animate-left delay arrow down">See my resume.</p>
     </div>
   </div>
 
@@ -74,5 +74,15 @@ body, html {
 .delay {
   animation-delay: 2s;
   animation-fill-mode: both;
+}
+.arrow {
+  border: solid #9e9e9e;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 </style>
