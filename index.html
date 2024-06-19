@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <title>Andrew Idak</title>
 </head>
@@ -12,12 +11,12 @@
 <body>
 
   <div class="bgimg display-container animate-opacity text-white">
+    <!-- <div class="vl"></div> -->
     <div class="display-middle">
       <h1 class="large center animate-bottom">Andrew Idak</h1>
-      <hr class="border-grey animate-bottom" style="margin:auto;width:40%">
-      <p class="norm center animate-bottom">Welcome to my home page!</p>
-      <p class="norm center animate-bottom delay">See my resume.</p>
-      <p class="arrow down display-middle animate-bottom delay"></p>
+      <hr class="border-grey animate-bottom delay1" style="margin:auto;width:40%">
+      <p class="norm center animate-bottom delay2">Come explore my work.</p>
+      <p class="display-middle down arrow animate-bottom delay3"></p>
     </div>
   </div>
 
@@ -25,12 +24,21 @@
 </html>
 
 <style>
-body, h1 {
+/* .vl {
+  border-left: 6px solid green;
+  height: 2000px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+} */
+body {
   font-family: "Raleway", sans-serif;
 }
 body, html {
   height: 100%;
   background-color: rgb(54, 80, 67);
+  margin: 0;
 }
 .bgimg {
   background-image: url('BG.jpg');
@@ -72,18 +80,36 @@ body, html {
 .animate-left {position:relative;animation:animateleft 1s}@keyframes animateleft {
   from{left:-300px;opacity:0} to{left:0;opacity:1}
 }
-.delay {
-  animation-delay: 2s;
+.delay1 {
+  animation-delay: 0.25s;
+  animation-fill-mode: both;
+}
+.delay2 {
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.delay3 {
+  animation-delay: 0.75s;
+  animation-fill-mode: both;
+}
+.delay4 {
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 .arrow {
   border: solid #9e9e9e;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 10px;
+}
+.arrow:hover {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
 }
 .down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  transform: translate(-50%,-50%) rotate(45deg);
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
 }
 </style>
