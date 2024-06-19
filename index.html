@@ -14,9 +14,9 @@
     <!-- <div class="vl"></div> -->
     <div class="display-middle">
       <h1 class="large center animate-bottom">Andrew Idak</h1>
-      <hr class="border-grey animate-bottom delay1" style="margin:auto;width:40%">
+      <hr class="animate-bottom delay1" style="margin:auto;width:40%">
       <p class="norm center animate-bottom delay2">Come explore my work.</p>
-      <p class="display-middle down arrow animate-bottom delay3"></p>
+      <button class="button display-middle down arrow animate-bottom delay3"></button>
     </div>
   </div>
 
@@ -39,6 +39,11 @@ body, html {
   height: 100%;
   background-color: rgb(54, 80, 67);
   margin: 0;
+}
+hr {
+  height:2px;
+  border-width:0;
+  background-color:#9e9e9e;
 }
 .bgimg {
   background-image: url('BG.jpg');
@@ -65,11 +70,29 @@ body, html {
 .text-white{
   color:#fff!important
 }
-.border-grey{
-  border-color:#9e9e9e!important
-}
 .center{
   text-align: center;
+}
+.button {
+  cursor: pointer;
+}
+.arrow {
+  background-color: transparent;
+  border: solid #9e9e9e;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.arrow:hover {
+  background-color: transparent;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.down {
+  transform: translate(-50%,-50%) rotate(45deg);
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
 }
 .animate-opacity {animation:blur 1s}@keyframes blur {
   from{filter: blur(20px);} to{filter: blur(0);}
@@ -95,21 +118,5 @@ body, html {
 .delay4 {
   animation-delay: 1s;
   animation-fill-mode: both;
-}
-.arrow {
-  border: solid #9e9e9e;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-}
-.arrow:hover {
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-}
-.down {
-  transform: translate(-50%,-50%) rotate(45deg);
-  -webkit-transform: translate(-50%,-50%) rotate(45deg);
 }
 </style>
