@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 
-<script>
-  document.title = "Andrew's Site";
-</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<title>Andrew Idak</title>
+</head>
 
 <html>
 <body>
-  <div class="main">
-    <h1>Andrew's Site</h1>
-    <hr>
-    <p>Welcome!</p>
+
+  <div class="bgimg w3-display-container animate-opacity w3-text-white">
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top">Andrew Idak</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Welcome to my home page!</p>
+    </div>
   </div>
+
 </body>
 </html>
 
 <style>
-  html {
-    min-height: 100%;
-    background-image: url("BG.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  body {
-    max-width: fit-content;
-    margin: auto;
-    text-align: center;
-    font-family: helvetica, sans-serif;
-    color: white;
-    height: 100%;
-    width: 100%;
-  }
-  .main {
-    height: 100%;
-    width: 50%;
-    backdrop-filter: blur(5px);
-  }
-  h1 {
-    font-size: 5vw;
-  }
+body, h1 {
+  font-family: "Raleway", sans-serif;
+}
+body, html {
+  height: 100%;
+  background-color: rgb(54, 80, 67);
+}
+.bgimg {
+  background-image: url('bg.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.animate-opacity {animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
 </style>
