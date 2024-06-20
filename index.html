@@ -13,12 +13,25 @@
   <div class="bgimg display-container animate-opacity text-white">
     <!-- <div class="vl"></div> -->
     <div class="display-middle">
-      <h1 class="large center animate-bottom">Andrew Idak</h1>
-      <hr class="animate-bottom delay1" style="margin:auto;width:40%">
-      <p class="norm center animate-bottom delay2">Come explore my work.</p>
-      <button class="button display-middle down arrow animate-bottom delay3"></button>
+      <h1 id="title" class="large center animate-bottom">Andrew Idak</h1>
+      <hr id="bar" class="animate-bottom delay1" style="margin:auto;width:40%">
+      <p id="desc" class="norm center animate-bottom delay2">Come explore my work.</p>
+      <button id="btn" onclick="scrollAnim()" class="button display-middle down arrow animate-bottom delay3"></button>
     </div>
   </div>
+
+  <script>
+    function scrollAnim() {
+      document.getElementById("title").classList.remove("animate-bottom");
+      document.getElementById("title").classList.add("animate-top-out");
+      document.getElementById("bar").classList.remove("animate-bottom");
+      document.getElementById("bar").classList.add("animate-top-out");
+      document.getElementById("desc").classList.remove("animate-bottom");
+      document.getElementById("desc").classList.add("animate-top-out");
+      document.getElementById("btn").classList.remove("animate-bottom");
+      document.getElementById("btn").classList.add("animate-top-out");
+    }
+  </script>
 
 </body>
 </html>
@@ -45,6 +58,12 @@ hr {
   border-width:0;
   background-color:#9e9e9e;
 }
+/* h1 {
+  background-color: #ffffff09;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 25px;
+} */
 .bgimg {
   background-image: url('BG.jpg');
   min-height: 100%;
@@ -97,26 +116,30 @@ hr {
 .animate-opacity {animation:blur 1s}@keyframes blur {
   from{filter: blur(20px);} to{filter: blur(0);}
 }
-.animate-bottom {position:relative;animation:animatebottom 1s}@keyframes animatebottom {
-  from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}
+.animate-top-out {
+  position:relative;
+  animation:animatetopout 1s;
+  animation-fill-mode: both;
+} @keyframes animatetopout {
+  from{bottom:0;opacity:1} to{bottom:300px;opacity:0}
 }
-.animate-left {position:relative;animation:animateleft 1s}@keyframes animateleft {
-  from{left:-300px;opacity:0} to{left:0;opacity:1}
+.animate-bottom {
+  position:relative;
+  animation:animatebottom 1s;
+  animation-fill-mode: both;
+} @keyframes animatebottom {
+  from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}
 }
 .delay1 {
   animation-delay: 0.25s;
-  animation-fill-mode: both;
 }
 .delay2 {
   animation-delay: 0.5s;
-  animation-fill-mode: both;
 }
 .delay3 {
   animation-delay: 0.75s;
-  animation-fill-mode: both;
 }
 .delay4 {
   animation-delay: 1s;
-  animation-fill-mode: both;
 }
 </style>
