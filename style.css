@@ -8,6 +8,7 @@
 } */
 body {
   font-family: "Raleway", sans-serif;
+  overflow: hidden;
 }
 body, html {
   height: 100%;
