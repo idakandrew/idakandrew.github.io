@@ -15,29 +15,16 @@
 
 <html>
 <body>
+  <script src="script.js"></script>
 
   <div class="bgimg display-container animate-opacity text-white">
     <!-- <div class="vl"></div> -->
     <div class="display-middle">
       <h1 id="title" class="large center animate-bottom">Andrew Idak</h1>
       <hr id="bar" class="animate-bottom delay1" style="margin:auto;width:40%">
-      <p id="desc" class="norm center animate-bottom delay2">Come explore my site.</p>
+      <p id="desc" class="norm center animate-bottom delay2">Press any key or the arrow to explore my site.</p>
       <button id="btn" onclick="scrollAnim()" class="button display-middle down arrow animate-bottom delay3"></button>
     </div>
   </div>
-
-  <script>
-    function scrollAnim() {
-      document.getElementById("title").classList.remove("animate-bottom");
-      document.getElementById("title").classList.add("animate-top-out");
-      document.getElementById("bar").classList.remove("animate-bottom");
-      document.getElementById("bar").classList.add("animate-top-out");
-      document.getElementById("desc").classList.remove("animate-bottom");
-      document.getElementById("desc").classList.add("animate-top-out");
-      document.getElementById("btn").classList.remove("animate-bottom");
-      document.getElementById("btn").classList.add("animate-top-out");
-    }
-  </script>
-
 </body>
 </html>
